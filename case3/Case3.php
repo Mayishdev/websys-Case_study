@@ -8,7 +8,7 @@
             margin: 30px;
             background: #f5f5f5;
         }
-        h2 {
+        h1 {
             text-align: center;
         }
         form {
