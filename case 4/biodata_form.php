@@ -2,7 +2,6 @@
 $errors = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Check required fields
     $required_fields = [
         "position" => "Position Desired",
         "name" => "Name",
