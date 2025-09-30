@@ -32,12 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Check if a file was uploaded
+    
     if ($_FILES["myfile"]["error"] == 4) {
         $errors["myfile"] = "Picture upload is required";
     }
 
-    // If no errors, redirect to display_biodata.php
+   
     if (empty($errors)) {
         include("display_biodata.php");
         exit;
@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             font-weight: bold;
             color: #444;
             display: inline-block;
-            width: 180px; /* align labels */
+            width: 180px; 
         }
         .error {
             color: red;
