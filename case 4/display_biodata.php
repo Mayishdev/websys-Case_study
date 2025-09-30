@@ -1,9 +1,9 @@
 <?php
 if (isset($_POST['submit'])) {
-    // Directory where files will be uploaded
+    
     $target_dir = "uploads/";
 
-    // Create the uploads folder if not exists
+  
     if (!is_dir($target_dir)) {
         mkdir($target_dir, 0777, true);
     }
@@ -17,26 +17,26 @@ if (isset($_POST['submit'])) {
     $newFileName = uniqid("file_", true) . "." . $fileType;
     $target_file = $target_dir . $newFileName;
 
-    // Check if file exists
+   
     if (file_exists($target_file)) {
         echo "Sorry, file already exists.<br>";
         $uploadOk = 0;
     }
 
-    // Limit file size (2MB max)
+    
     if ($_FILES["myfile"]["size"] > 2 * 1024 * 1024) {
         echo "Sorry, your file is too large (max 2MB).<br>";
         $uploadOk = 0;
     }
 
-    // Allow only certain file formats
+    
     $allowed_types = ["jpg", "jpeg", "png", "gif", "pdf"];
     if (!in_array($fileType, $allowed_types)) {
         echo "Sorry, only JPG, JPEG, PNG, GIF & PDF files are allowed.<br>";
         $uploadOk = 0;
     }
 
-    // Upload file if valid
+    
     if ($uploadOk == 0) {
         echo "Your file was not uploaded.<br>";
         $uploadedFilePath = "";
@@ -89,7 +89,7 @@ if (isset($_POST['submit'])) {
             border-radius: 8px;
         }
         .biodata-info {
-            margin-left: 190px; /* pushes text away from the picture */
+            margin-left: 190px; 
         }
         .biodata-info h2 {
             text-align: center;
